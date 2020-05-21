@@ -20,6 +20,7 @@
   
   <script>
     $(function () {
+      // 실행 및 옵션
       $('.mydate').datePicker({
         format: 'YY-MM-DD HH:mm:ss',
         isRange: true,  // 시작, 종료 범위 달력
