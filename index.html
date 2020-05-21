@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>달력 라이브러리</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- 달력 CSS -->
+  <link rel="stylesheet" href="css/datepicker.css">
+
+</head>
+
+<body>
+  <div class="mydate c-datepicker-date-editor  J-datepicker-range-day mt10">
+    <input id="start-day" placeholder="Start" name="" class="c-datepicker-data-input only-date" value="">
+    <span class="c-datepicker-range-separator">-</span>
+    <input id="end-day" placeholder="End" name="" class="c-datepicker-data-input only-date" value="">
+  </div>
+
+  <script>
+    $(function () {
+      $('.mydate').datePicker({
+        format: 'YY-MM-DD HH:mm:ss',
+        isRange: true,  // 시작, 종료 범위 달력
+        language: 'ko'  // 언어설정
+      });
+    })
+
+    // 오늘 날짜 표시
+    var d = new Date().toLocaleString().slice(0, 12);
+    console.log(d)
+    $('#start-day').val(d);
+
+  </script>
+</body>
+
+
+<!-- 달력 라이브러리(하단에 추가) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment.min.js"></script>
+<script src="js/datepicker.all.min.js"></script>
+<script src="js/datepicker.all.js"></script>
+<script src="js/datapicker-separate/datepicker-only-time.js"></script>
+<!-- 한글 -->
+<script src="js/datepicker.ko.js"></script>
+
+</html>
