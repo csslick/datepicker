@@ -5,6 +5,13 @@
 - 한글화는 js폴더의 datepicker.ko.js를 수정하시오.
 
 ```
+<head>
+  ...
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- 달력 CSS -->
+  <link rel="stylesheet" href="css/datepicker.css">
+</head>
+
   <div class="mydate c-datepicker-date-editor  J-datepicker-range-day mt10">
     <input id="start-day" placeholder="Start" name="" class="c-datepicker-data-input only-date" value="">
     <span class="c-datepicker-range-separator">-</span>
